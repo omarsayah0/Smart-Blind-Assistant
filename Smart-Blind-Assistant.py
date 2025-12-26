@@ -84,11 +84,11 @@ def main():
 
         traffic_light_info = []
         vehicles_info = []
-        frame_center_y = frame_height // 2
+        frame_center_y = frame_height // 2 #not used not, but maybe in a future edit
 
         for box in detections:
             cls_id = int(box.cls[0].item())
-            conf = box.conf[0].item()
+            conf = box.conf[0].item() #not used not, but maybe in a future edit
             x1, y1, x2, y2 = box.xyxy[0].tolist()
 
             class_name = model.names[cls_id]
